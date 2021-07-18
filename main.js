@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 const cleanGSAP = () => {
     ScrollTrigger.getAll().forEach(t => t.kill(false));
     ScrollTrigger.refresh();
-    window.dispatchEvent(new Event("resize"));
+    // window.dispatchEvent(new Event("resize"));
 };
 
 function delay(n) {
@@ -40,7 +40,8 @@ function contentAnimation() {
     console.log("aaa");
 }
 ////////////////////////////////////////////////////////////////
-let tlStage1;
+// let tlStage1;
+// let tlStage2;
 
 function homeinit() {
     // cleanGSAP();
@@ -61,7 +62,7 @@ function homeinit() {
         )
         .to(".homeinfo", { opacity: 1, duration: 1.5 }, 1.5);
 
-    tlStage1 = gsap.timeline({
+    var tlStage1 = gsap.timeline({
         scrollTrigger: {
             trigger: ".left",
             start: "top top+=10%",
@@ -91,7 +92,7 @@ function homeinit() {
         ease: 'none'
     });
 
-    tlStage2 = gsap.timeline({
+    var tlStage2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".homesection1",
             start: "top-=40% top+=30%",
@@ -100,10 +101,10 @@ function homeinit() {
             scrub: 1,
         },
     });
-    gsap.set('.banner span', { y: 100, opacity: 0 });
-    gsap.set('.col1 span', { y: 100, opacity: 0 });
-    gsap.set('.col2 span', { y: 100, opacity: 0 });
-    tlStage2.to('.banner span', { y: '0', opacity: '1', duration: 1 }, 0).to('.col1 span', { y: '0', opacity: 1, duration: 1 }, 1).to('.col2 span', { y: '0', opacity: 1, duration: 1 }, 1);;
+    gsap.set('.bannerspan', { y: '100', opacity: 0 });
+    gsap.set('.homesection1span', { y: '100', opacity: 0 });
+    tlStage2.to('.bannerspan', { y: '0', opacity: '1', duration: 1 }, 0).to('.homesection1span', { y: '0', opacity: 1, duration: 1 }, 1);
+    // tlStage2.from('.bannerspan', { y: '+=50%', duration: 1 }, 0).from('.homesection1span', { y: '+=50%', duration: 1 }, 1);
 
     var changetext = ['People', 'Society', 'Creativity'];
     var index = 0;
@@ -142,22 +143,24 @@ barba.init({
     }, ],
     views: [{
             namespace: "home",
-            // enter(data) {
-            //     window.scrollTo(0, 0);
+            // leave(data) {
+            //     cleanGSAP();
             // },
             afterEnter(data) {
                 // setTimeout(homeinit(), 3000);
+                // location.reload();
                 window.scrollTo(0, 0);
                 homeinit();
             },
         },
         {
             namespace: "test",
-            // enter(data) {
-            //     window.scrollTo(0, 0);
+            // leave(data) {
+            //     cleanGSAP();
             // },
             afterEnter(data) {
                 console.log("going test");
+                // location.reload();
                 window.scrollTo(0, 0);
                 homeinit();
                 // do something before entering the `contact` namespace
