@@ -60,6 +60,7 @@ function homeinit() {
             },
             0
         )
+        .to("div.menu-bar a", { opacity: 1, duration: 1 }, 1.5)
         .to(".homeinfo", { opacity: 1, duration: 1.5 }, 1.5);
 
     var tlStage1 = gsap.timeline({
@@ -72,7 +73,7 @@ function homeinit() {
         },
     });
     // gsap.set('.homebg',{zIndex:1});
-    tlStage1.to('.homebg', { y: '-=30%',duration: 1, ease: 'power1.easeOut' });
+    tlStage1.to('.homebg', { y: '-=30%', duration: 1, ease: 'power1.easeOut' });
 
     gsap.fromTo(".imgwrap", {
         y: "-50vh"
