@@ -71,8 +71,8 @@ function homeinit() {
             scrub: 1,
         },
     });
-
-    tlStage1.to('.homebg', { y: '-=60%', duration: 1 });
+    // gsap.set('.homebg',{zIndex:1});
+    tlStage1.to('.homebg', { y: '-=30%',duration: 1, ease: 'power1.easeOut' });
 
     gsap.fromTo(".imgwrap", {
         y: "-50vh"
@@ -98,6 +98,7 @@ function homeinit() {
             start: "top-=40% top+=30%",
             end: "bottom-=10% bottom-=50%",
             // markers: true,
+            once: true,
             scrub: 1,
         },
     });
@@ -162,7 +163,7 @@ barba.init({
                 console.log("going test");
                 // location.reload();
                 window.scrollTo(0, 0);
-                homeinit();
+                // homeinit();
                 // do something before entering the `contact` namespace
             },
         },
