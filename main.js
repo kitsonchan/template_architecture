@@ -60,8 +60,7 @@ function homeinit() {
             },
             0
         )
-        .to("div.menu-bar a", { opacity: 1, duration: 1 }, 1.5)
-        .to(".homeinfo", { opacity: 1, duration: 1.5 }, 1.5);
+        .to("div.menu-bar a", { opacity: 1, duration: 1 }, 1.5);
 
     var tlStage1 = gsap.timeline({
         scrollTrigger: {
@@ -105,7 +104,7 @@ function homeinit() {
     });
     gsap.set('.bannerspan', { y: '100', opacity: 0 });
     gsap.set('.homesection1span', { y: '100', opacity: 0 });
-    tlStage2.to('.bannerspan', { y: '0', opacity: '1', duration: 1 }, 0).to('.homesection1span', { y: '0', opacity: 1, duration: 1 }, 1);
+    tlStage2.to('.bannerspan', { y: '0', opacity: '1', duration: 1 }, 0).to('.homesection1span', { y: '0', opacity: 1, duration: 1 }, 0.8);
     // tlStage2.from('.bannerspan', { y: '+=50%', duration: 1 }, 0).from('.homesection1span', { y: '+=50%', duration: 1 }, 1);
 
     var changetext = ['People', 'Society', 'Creativity'];

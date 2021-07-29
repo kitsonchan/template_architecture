@@ -49,15 +49,15 @@ body {
           justify-content: flex-end;
 }
 
-div.menu-bar a {
+.menu-bar a {
   opacity: 0;
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 1.2em;
   padding-right: 1em;
 }
 
-div.menu-bar a:hover {
+.menu-bar a:hover {
   font-weight: bold;
 }
 
@@ -83,9 +83,10 @@ div.menu-bar a:hover {
   width: 40%;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media all and (max-width: 668px) {
   .hometext {
     width: 80%;
+    background-color: red;
   }
 }
 
@@ -101,7 +102,7 @@ div.menu-bar a:hover {
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media all and (max-width: 668px) {
   .homebg {
     display: none;
   }
@@ -145,7 +146,7 @@ div.menu-bar a:hover {
   font-family: "Open Sans", sans-serif;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media all and (max-width: 668px) {
   .banner span {
     position: initial;
     padding: 0;
@@ -214,7 +215,7 @@ div.menu-bar a:hover {
   position: relative;
 }
 
-.homesection2 div:nth-of-type(-n+2) {
+.homesection2 div:nth-of-type(-n + 2) {
   font-family: "Open Sans", sans-serif;
   font-size: 4em;
 }
@@ -250,5 +251,63 @@ div.menu-bar a:hover {
 
 .button1:hover a {
   color: #828282;
+}
+
+.pun {
+  font-family: 'Noto Sans', sans-serif;
+  color: black;
+  font-size: 9vw;
+  margin: 0;
+  line-height: 1;
+}
+
+.explain {
+  margin-top: 5rem;
+}
+
+.aboutinfo {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aboutinfo div {
+  padding: 10px;
+}
+
+.aboutinfo .number {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.aboutinfo .desc {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.about-wrapper {
+  margin-top: 5rem;
+  height: 600px;
+  background-image: url("../assets/about2.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 6vw;
+}
+
+.about-wrapper p {
+  position: relative;
+  width: 50vw;
+  left: 10vw;
+}
+
+.about-wrapper span {
+  color: #b4b482;
 }
 /*# sourceMappingURL=style.css.map */
