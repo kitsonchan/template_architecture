@@ -48,6 +48,7 @@ function homeinit() {
     var initTl = gsap.timeline();
     gsap.set(".homeheading", { y: "100" });
     gsap.set(".hometext", { y: "100" });
+    gsap.set("div.menu-bar a", { opacity: 0 });
 
     initTl
         .to(".homeheading", { y: "0", opacity: "1", duration: 1.5 }, 0)

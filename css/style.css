@@ -50,7 +50,6 @@ body {
 }
 
 .menu-bar a {
-  opacity: 0;
   text-decoration: none;
   color: black;
   font-size: 1.2em;
@@ -215,7 +214,7 @@ body {
   position: relative;
 }
 
-.homesection2 div:nth-of-type(-n + 2) {
+.homesection2 div:nth-of-type(-n+2) {
   font-family: "Open Sans", sans-serif;
   font-size: 4em;
 }
