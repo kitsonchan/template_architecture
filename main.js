@@ -74,7 +74,7 @@ function homeinit() {
         },
     });
 
-    tlStage1.to('.homebg', { y: '-=30%', duration: 1, ease: 'power1.easeOut' });
+    tlStage1.to('.homebg', { y: '-=30%', duration: 1, ease: 'power1.easeOut' }, 0);
 
     gsap.fromTo(".imgwrap", {
         y: "-50vh"
@@ -126,8 +126,8 @@ function homeinit() {
 }
 
 function aboutInit() {
-    var initTl= gsap.timeline();
-    initTl.from('.pun',{y:'+=100%',duration: 1.5, ease: Expo.esaeOut},0).from('.explain',{y:'+=100%',duration: 1, ease: Expo.esaeOut},0.5);
+    var initTl = gsap.timeline();
+    initTl.from('.pun', { y: '+=100%', duration: 1.5, ease: Expo.esaeOut }, 0).from('.explain', { y: '+=100%', duration: 1, ease: Expo.esaeOut }, 0.5);
 }
 
 barba.init({
