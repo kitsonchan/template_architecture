@@ -248,6 +248,11 @@ body {
 }
 
 ////////////////////////////////////////////////
+.pun-wrapper{
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
 .pun {
     font-family: 'Noto Sans', sans-serif;
     color: black;
@@ -255,6 +260,10 @@ body {
     margin: 0;
     line-height: 1;
     margin-top: 3rem;
+}
+
+.explain-wrapper {
+  overflow: hidden;
 }
 
 .explain {
@@ -294,23 +303,12 @@ body {
     position: relative;
 }
 
-.about-wrapper p {
-    position: relative;
-    width: 50vw;
-    left: 10vw;
-}
-
-.about-wrapper span {
-    color: rgb(180, 180, 130);
-}
-
 .about-wrapper:after{
   content:"About Lorem";
   position: absolute;
   font-size: 6rem;
   top: 0;
   left: 10%;
-  font-family: 'Noto Sans', sans-serif;
   transform: translateY(-50%);
 }
 

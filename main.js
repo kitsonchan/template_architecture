@@ -69,7 +69,7 @@ function homeinit() {
             trigger: ".left",
             start: "top+=10% top",
             end: "bottom bottom-=70%",
-            markers: true,
+            // markers: true,
             scrub: 1,
         },
     });
@@ -125,6 +125,11 @@ function homeinit() {
     // window.dispatchEvent(new Event('resize'));
 }
 
+function aboutInit() {
+    var initTl= gsap.timeline();
+    initTl.from('.pun',{y:'+=100%',duration: 1.5, ease: Expo.esaeOut},0).from('.explain',{y:'+=100%',duration: 1, ease: Expo.esaeOut},0.5);
+}
+
 barba.init({
     sync: true,
     transitions: [{
@@ -154,8 +159,8 @@ barba.init({
         {
             namespace: "test",
             afterEnter(data) {
-                console.log("going test");
                 window.scrollTo(0, 0);
+                aboutInit();
             },
         },
     ],
