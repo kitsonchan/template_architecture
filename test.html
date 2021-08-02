@@ -1,87 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Test</title>
     <meta name="description" content="Starter Template" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body data-barba="wrapper">
+  <body data-barba="wrapper">
     <div class="load-container">
-        <div class="loading-screen"></div>
+      <div class="loading-screen"></div>
     </div>
 
     <div class="wrapper">
+      
+      <main data-barba="container" data-barba-namespace="test">
         <div class="menu-bar">
-            <a href="./index.html">Home</a>
-            <a href="">About Us</a>
+          <a href="./index.html">Home</a>
+          <a href="">About Us</a>
         </div>
-        <main data-barba="container" data-barba-namespace="test">
-            <section class="about1">
-                <h1 class="pun">Architecture needs a different design</h1>
-                <div class="explain">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-                </div>
-                <div class="aboutinfo">
-                    <div>
-                        <p class='number'>18</p>
-                        <p class='desc'>Years of experience</p>
-                    </div>
-                    <div>
-                        <p class='number'>50</p>
-                        <p class='desc'>Clients</p>
-                    </div>
-                    <div>
-                        <p class='number'>564</p>
-                        <p class='desc'>Finished projects</p>
-                    </div>
-                    <div>
-                        <p class='number'>3000</p>
-                        <p class='desc'>Working days</p>
-                    </div>
-                </div>
-            </section>
-            <section class="about2">
-                <!-- <div class="about-text">About <span>Lorem</span></div>
+        <section class="about1">
+          <h1 class="pun">Architecture needs a different design</h1>
+          <div class="explain">
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts.
+          </div>
+          <div class="aboutinfo">
+            <div>
+              <p class="number">18</p>
+              <p class="desc">Years of experience</p>
+            </div>
+            <div>
+              <p class="number">50</p>
+              <p class="desc">Clients</p>
+            </div>
+            <div>
+              <p class="number">564</p>
+              <p class="desc">Finished projects</p>
+            </div>
+            <div>
+              <p class="number">3000</p>
+              <p class="desc">Working days</p>
+            </div>
+          </div>
+        </section>
+        <section class="about2">
+          <!-- <div class="about-text">About <span>Lorem</span></div>
       <img class="about-bg" src="./assets/about2.jpeg" alt=""/> -->
-                <div class="about-wrapper">
-                    <p>About <span>Lorem</span></p>
-                </div>
-                <div>
-                    <div>
-                        <img src="./assets/about3.jpeg" alt="" />
-                        <p>18</p>
-                        <p>Years of experience</p>
-                    </div>
-                    <div>
-                        <img src="./assets/about3.jpeg" alt="" />
-                        <p>18</p>
-                        <p>Years of experience</p>
-                    </div>
-                    <div>
-                        <img src="./assets/about3.jpeg" alt="" />
-                        <p>18</p>
-                        <p>Years of experience</p>
-                    </div>
-                </div>
-            </section>
-        </main>
+          <div class="about-wrapper">
+            <!-- <p>About <span>Lorem</span></p> -->
+          </div>
+          <div class="characteristics">
+            <div>
+              <img src="./assets/about3.jpeg" alt="" />
+              <p>Perfectly Designed</p>
+              <p>
+                Even the all-powerful Pointing has no control about the blind
+                texts it is an almost unorthographic.
+              </p>
+            </div>
+            <div>
+              <img src="./assets/about3.jpeg" alt="" />
+              <p>Carefully Planned</p>
+              <p>
+                Even the all-powerful Pointing has no control about the blind
+                texts it is an almost unorthographic.
+              </p>
+            </div>
+            <div>
+              <img src="./assets/about3.jpeg" alt="" />
+              <p>Smartly Executeed</p>
+              <p>
+                Even the all-powerful Pointing has no control about the blind
+                texts it is an almost unorthographic.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
 
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>

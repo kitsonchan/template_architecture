@@ -45,6 +45,7 @@ function contentAnimation() {
 
 function homeinit() {
     // cleanGSAP();
+
     var initTl = gsap.timeline();
     gsap.set(".homeheading", { y: "100" });
     gsap.set(".hometext", { y: "100" });
@@ -66,13 +67,13 @@ function homeinit() {
     var tlStage1 = gsap.timeline({
         scrollTrigger: {
             trigger: ".left",
-            start: "top top+=10%",
-            end: "bottom+=100% bottom-=40%",
-            // markers: true,
+            start: "top+=10% top",
+            end: "bottom bottom-=70%",
+            markers: true,
             scrub: 1,
         },
     });
-    // gsap.set('.homebg',{zIndex:1});
+
     tlStage1.to('.homebg', { y: '-=30%', duration: 1, ease: 'power1.easeOut' });
 
     gsap.fromTo(".imgwrap", {
@@ -145,27 +146,16 @@ barba.init({
     }, ],
     views: [{
             namespace: "home",
-            // leave(data) {
-            //     cleanGSAP();
-            // },
             afterEnter(data) {
-                // setTimeout(homeinit(), 3000);
-                // location.reload();
                 window.scrollTo(0, 0);
                 homeinit();
             },
         },
         {
             namespace: "test",
-            // leave(data) {
-            //     cleanGSAP();
-            // },
             afterEnter(data) {
                 console.log("going test");
-                // location.reload();
                 window.scrollTo(0, 0);
-                // homeinit();
-                // do something before entering the `contact` namespace
             },
         },
     ],

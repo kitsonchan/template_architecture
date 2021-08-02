@@ -258,6 +258,7 @@ body {
   font-size: 9vw;
   margin: 0;
   line-height: 1;
+  margin-top: 3rem;
 }
 
 .explain {
@@ -291,13 +292,14 @@ body {
 }
 
 .about-wrapper {
-  margin-top: 5rem;
+  margin: 0 -1em;
+  margin-top: 10rem;
   height: 600px;
   background-image: url("../assets/about2.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 6vw;
+  position: relative;
 }
 
 .about-wrapper p {
@@ -308,5 +310,36 @@ body {
 
 .about-wrapper span {
   color: #b4b482;
+}
+
+.about-wrapper:after {
+  content: "About Lorem";
+  position: absolute;
+  font-size: 6rem;
+  top: 0;
+  left: 10%;
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.characteristics {
+  margin: 0 auto;
+  margin-top: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.characteristics img {
+  width: 80px;
+  border-radius: 50px;
+}
+
+.characteristics div {
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */
