@@ -323,7 +323,7 @@ body {
 
 .characteristics {
   margin: 0 auto;
-  margin-top: 12rem;
+  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,5 +339,24 @@ body {
 
 .characteristics div {
   padding: 10px;
+  overflow: hidden;
+}
+
+.about3 {
+  background: #323232;
+  margin: 0 -1em -1em -1em;
+  margin-top: 8rem;
+  height: 500px;
+  position: relative;
+  text-align: center;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.svg-text {
+  font-size: 3rem;
+  fill: white;
 }
 /*# sourceMappingURL=style.css.map */
