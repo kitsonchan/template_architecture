@@ -248,9 +248,9 @@ body {
 }
 
 ////////////////////////////////////////////////
-.pun-wrapper{
-  overflow: hidden;
-  padding-bottom: 30px;
+.pun-wrapper {
+    overflow: hidden;
+    padding-bottom: 30px;
 }
 
 .pun {
@@ -263,7 +263,7 @@ body {
 }
 
 .explain-wrapper {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .explain {
@@ -303,34 +303,34 @@ body {
     position: relative;
 }
 
-.about-wrapper:after{
-  content:"About Lorem";
-  position: absolute;
-  font-size: 6rem;
-  top: 0;
-  left: 10%;
-  transform: translateY(-50%);
+.about-wrapper:after {
+    content: "About Lorem";
+    position: absolute;
+    font-size: 6rem;
+    top: 0;
+    left: 10%;
+    transform: translateY(-50%);
 }
 
-.characteristics{
-  margin: 0 auto;
-  margin-top: 5rem;
-  display: flex;
-  justify-content:space-between;
+.characteristics {
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.characteristics img{
-  width:80px;
-  border-radius: 50px;
+.characteristics img {
+    width: 80px;
+    border-radius: 50px;
 }
 
-.characteristics div{
-  padding: 10px;
-  overflow: hidden;
+.characteristics div {
+    padding: 10px;
+    overflow: hidden;
 }
 
-.about3{
-   background:rgb(50, 50, 50);
+.about3 {
+    background: rgb(50, 50, 50);
     margin: 0 -1em -1em -1em;
     margin-top: 8rem;
     height: 500px;
@@ -338,11 +338,6 @@ body {
     text-align: center;
 }
 
-svg{
+svg {
     cursor: pointer;
-}
-
-.svg-text{
-    font-size: 3rem;
-    fill: white;
 }
