@@ -107,7 +107,7 @@ function homeinit() {
             trigger: ".homesection1",
             start: "top-=10% top+=30%",
             end: "bottom-=30% bottom-=60%",
-            markers: true,
+            // markers: true,
             once: true,
             scrub: 1,
         },
@@ -165,7 +165,7 @@ function aboutInit() {
             trigger: ".about2",
             start: "top-=20% top+=50%",
             end: "bottom bottom-=30%",
-            markers: true,
+            // markers: true,
             once: true,
             scrub: 1,
         },
@@ -193,6 +193,16 @@ function aboutInit() {
         // tl.play(0);
         gsap.to(".text-mask", 1.5, { scaleX: 0, transformOrigin: "left center" }, );
     });
+
+    document.querySelector('svg').addEventListener('touchstart', function(e) {
+      // tl.play(0);
+      gsap.to(".text-mask", 1.5, { scaleX: 1 }, );
+  });
+
+  document.querySelector('svg').addEventListener('touchend', function(e) {
+      // tl.play(0);
+      gsap.to(".text-mask", 1.5, { scaleX: 0, transformOrigin: "left center" }, );
+  });
 }
 
 barba.init({
@@ -223,12 +233,19 @@ barba.init({
             },
         },
         {
-            namespace: "test",
+            namespace: "about",
             afterEnter(data) {
                 // window.scrollTo(0, 0);
                 aboutInit();
             },
         },
+        {
+          namespace: "projects",
+          afterEnter(data) {
+              // window.scrollTo(0, 0);
+              console.log("pj")
+          },
+      },
     ],
 });
 
