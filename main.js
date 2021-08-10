@@ -78,7 +78,7 @@ function homeinit() {
     });
 
     tlStage1.to(
-        ".homebg", { y: "-=30%", duration: 1, ease: "power1.easeOut" },
+        ".homebg", { y: "-100px", duration: 1, ease: "power1.easeOut" },
         0
     );
 
@@ -205,6 +205,29 @@ function aboutInit() {
   });
 }
 
+function projectInit() {
+    console.log("pj");
+    // var tlPj1 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".projects1",
+    //         start: "top+=10% top",
+    //         end: "bottom-=30% bottom",
+    //         markers: true,
+    //         scrub: 1,
+    //     },
+    // });
+
+    // tlPj1.to('.pj-info',{height: '100vh'})
+    // var elem = document.querySelector(".projects1");
+    // elem.onwheel = function (event) {
+    //     if (event.wheelDeltaY>0){
+    //         console.log('up');
+    //     }else{
+    //         console.log('down');
+    //     }
+    // }
+}
+
 barba.init({
     sync: true,
     transitions: [{
@@ -243,7 +266,7 @@ barba.init({
           namespace: "projects",
           afterEnter(data) {
               // window.scrollTo(0, 0);
-              console.log("pj")
+              projectInit();
           },
       },
     ],

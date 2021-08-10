@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Projects</title>
     <meta name="description" content="Starter Template" />
-    <link rel="icon" type="image/png" href="./assets/smile.png"/>
+    <link rel="icon" type="image/png" href="./assets/smile.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
-<body data-barba="wrapper">
+  </head>
+  <body data-barba="wrapper" style="background: white">
     <div class="load-container">
-        <div class="loading-screen"></div>
+      <div class="loading-screen"></div>
     </div>
 
     <div class="wrapper">
-        <main data-barba="container" data-barba-namespace="projects">
-            <div class="menu-bar menu-color-grey">
+    <main data-barba="container" data-barba-namespace="projects">
+      <div class="menu-bar menu-color-black">
                 <a href="./index.html">Home</a>
                 <a href="./about.html">About Us</a>
                 <a href=""><s>Projects</s></a>
             </div>
-            <section class="projects1 project-section">
-                <img src="./assets/projects1.jpeg" >
-                <div class='pj-info'>
-                    <h1>Cool design on https://www.signalworksarchitecture.com/</h1>
-                    <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        varius est eu convallis molestie. Aenean est ante, scelerisque in
-                        libero id, placerat maximus nisi.</div>
-                </div>
-            </section>
-           
-        </main>
+      <!-- <section class="projects1 project-section">
+        <div class="pj-image"></div>
+        <div class="pj-info">
+          <h1>Cool design on https://www.signalworksarchitecture.com/</h1>
+          <div class='block1'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+            est eu convallis molestie. Aenean est ante, scelerisque in libero
+            id, placerat maximus nisi.
+          </div>
+          <div class="block2">
+            Lorem ipsum dolor sit amet
+            <br>
+            LEARN MORE
+          </div>
+        </div>
+      </section> -->
+      <section class='pj1-section'>
+        <div class='carousel'>
+            <img src="./assets/projects1.jpeg" alt="pj1 img" class='pj1-img'>
+        </div>
+        <div class="title1">#Projects</div>
+      </section>
+      <section class="pj2-section"></section>
+
+      <!-- https://outofthevalley.co.uk/our-story/
+      https://www.signalworksarchitecture.com/ -->
+    </main>
     </div>
 
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>
