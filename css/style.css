@@ -374,4 +374,10 @@ body {
   font-size: 3.5em;
   font-weight: bold;
 }
+
+.pj2-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */
