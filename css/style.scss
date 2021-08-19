@@ -341,67 +341,34 @@ body {
   text-align: center;
 }
 ////////////////////////////////////////////////////////////////
-// .pj-image {
-//   background-image: url("../assets/projects1.jpeg");
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   height: 60vh;
-//   width: 100%;
-//   z-index: 5;
-// }
-
-// .pj-info {
-//   height: 40vh;
-//   width: 100%;
-//   background-color: rgb(130, 130, 130);
-//   position: relative;
-//   z-index: 10;
-// }
-
-// .pj-info::after {
-//   content: "#Project 1";
-//   position: absolute;
-//   top: 0;
-//   left: 5vw;
-//   transform: translateY(-50%);
-//   font-size: 5em;
-//   color: rgb(200, 200, 200);
-// }
-
-// .block1{
-//   padding: 5rem 3em 1em 3em;
-// }
-
-// .block2{
-//   border-top: 1px solid black;
-//   margin: 1em 3em;
-//   padding: 14px;
-//   width: 20%;
-//   line-height: 2;
-// }
-
 .pj1-section{
-  position: relative;
-  margin-top: 10em;
-}
-
-.pj1-img{
-  width: 80%;
-  height: 80vh;
-  margin: auto;
-  display: block;
-}
-
-.title1{
-  position: absolute;
-  top: 3rem;
-  left: 15%;
-  color: white;
-  font-size: 3.5em;
-  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+  padding-top: 100px;
 }
 
 .pj2-section{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+  padding-top: 100px;
 }
+
+.pj-wrapper{
+  position: relative;
+  max-width: 1260px;
+  margin: auto;
+  grid-column: 1 / 13;
+}
+
+.pj-title{
+  font-size: 2em;
+}
+
+.pj-img{
+  width: 100%;
+  height: 100%;
+}
+
+

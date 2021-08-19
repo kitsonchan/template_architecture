@@ -355,29 +355,40 @@ body {
 }
 
 .pj1-section {
-  position: relative;
-  margin-top: 10em;
-}
-
-.pj1-img {
-  width: 80%;
-  height: 80vh;
-  margin: auto;
-  display: block;
-}
-
-.title1 {
-  position: absolute;
-  top: 3rem;
-  left: 15%;
-  color: white;
-  font-size: 3.5em;
-  font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding-top: 100px;
 }
 
 .pj2-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding-top: 100px;
+}
+
+.pj-wrapper {
+  position: relative;
+  max-width: 1260px;
+  margin: auto;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+}
+
+.pj-title {
+  font-size: 2em;
+}
+
+.pj-img {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
