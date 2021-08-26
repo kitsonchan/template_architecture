@@ -4,8 +4,11 @@ body {
   padding: 0;
 }
 
-body {
+.body-bg{
   background: rgb(240, 240, 240);
+}
+
+body {
   font-family: "IBM Plex Mono", monospace;
 }
 
@@ -341,34 +344,40 @@ body {
   text-align: center;
 }
 ////////////////////////////////////////////////////////////////
-.pj1-section{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 10px;
-  padding-top: 100px;
-}
-
-.pj2-section{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 10px;
-  padding-top: 100px;
+.pj-section{
+  margin-top: 100px;
 }
 
 .pj-wrapper{
   position: relative;
   max-width: 1260px;
   margin: auto;
-  grid-column: 1 / 13;
 }
 
 .pj-title{
-  font-size: 2em;
+  font-size: 3em;
+  width: 60%;
+  padding-bottom: 10px;
+  color: rgb(200, 200, 200);
+}
+
+.pj-block{
+  display: flex;
+  justify-content:space-between;
+  // align-items: flex-end;
+}
+
+.pj-info{
+  width: 30%;
+  border-top: 1px solid black;
+  padding-top: 10px
 }
 
 .pj-img{
-  width: 100%;
-  height: 100%;
+  z-index: -1;
+  width: 60%;
+  transform: translateY(-30%)
+  // height: 100%;
 }
 
 

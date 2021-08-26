@@ -4,8 +4,11 @@ body {
   padding: 0;
 }
 
-body {
+.body-bg {
   background: #f0f0f0;
+}
+
+body {
   font-family: "IBM Plex Mono", monospace;
 }
 
@@ -354,41 +357,42 @@ body {
   text-align: center;
 }
 
-.pj1-section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  padding-top: 100px;
-}
-
-.pj2-section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  padding-top: 100px;
+.pj-section {
+  margin-top: 100px;
 }
 
 .pj-wrapper {
   position: relative;
   max-width: 1260px;
   margin: auto;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1 / 13;
 }
 
 .pj-title {
-  font-size: 2em;
+  font-size: 3em;
+  width: 60%;
+  padding-bottom: 10px;
+  color: #c8c8c8;
+}
+
+.pj-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pj-info {
+  width: 30%;
+  border-top: 1px solid black;
+  padding-top: 10px;
 }
 
 .pj-img {
-  width: 100%;
-  height: 100%;
+  z-index: -1;
+  width: 60%;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
 }
 /*# sourceMappingURL=style.css.map */
