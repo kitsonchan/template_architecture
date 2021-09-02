@@ -24,13 +24,13 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body data-barba="wrapper" >
+  <body data-barba="wrapper">
     <div class="load-container">
       <div class="loading-screen"></div>
     </div>
 
-    <div class="wrapper">
-      <main data-barba="container" data-barba-namespace="projects">
+    <main data-barba="container" data-barba-namespace="projects">
+      <div class="wrapper">
         <div class="menu-bar menu-color-black">
           <a href="./index.html">Home</a>
           <a href="./about.html">About Us</a>
@@ -38,11 +38,16 @@
         </div>
         <section class="pj-section" id="pj1">
           <div class="pj-wrapper">
-            <div class="pj-title">Over the years, we have completed more than 100 projects.</div>
+            <div class="pj-title">
+              Over the years, we have completed more than 100 projects.
+            </div>
             <div class="pj-block">
               <div class="pj-info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <div class="pj-bottomline"></div>
               </div>
               <div class="pj-img">
                 <img src="./assets/projects1.jpeg" width="100%" height="100%" />
@@ -50,27 +55,49 @@
             </div>
           </div>
         </section>
+      </div>
 
-        <section class="pj-section" id="pj2">
-          <div class="pj-wrapper">
-            <div class="pj-title">#Projects</div>
-            <div class="pj-block">
-              <div class="pj-info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-              <div class="pj-img">
-                <img src="./assets/projects1.jpeg" width="100%" height="100%" />
+      <section class="pj-section" id="pj2">
+        <!-- my plan: display grid and enlarge and minify-->
+
+        <div class="grid-container">
+          <div class="grid">
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
+            <div class="gridLayer centerPiece">
+              <div class="gridBlock centerBlock"></div>
+            </div>
+            <div class="gridLayer">
+              <div class="gridBlock">
+                <a href="https://greensock.com" target="_blank"></a>
               </div>
             </div>
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
+            <div class="gridLayer">
+              <div class="gridBlock"></div>
+            </div>
           </div>
-        </section>
-        <!-- https://outofthevalley.co.uk/our-story/
+        </div>
+      </section>
+      <!-- https://outofthevalley.co.uk/our-story/
       https://www.signalworksarchitecture.com/ 
           grid layout rework
-    -->
-      </main>
-    </div>
+    --></main>
 
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>

@@ -1,10 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
-function cleanGSAP(){
+function cleanGSAP() {
   ScrollTrigger.getAll().forEach((t) => t.kill(false));
   ScrollTrigger.refresh();
   // window.dispatchEvent(new Event("resize"));
-};
+}
 
 function delay(n) {
   n = n || 2000;
@@ -211,24 +211,77 @@ function aboutInit() {
 }
 
 function projectInit() {
-  var tlPj1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#pj1",
-      start: "top top",
-      end: "+=20%",
-      pin: "#pj1 .pj-title",
-      scrub: 1,
-      markers: true,
-    },
-  });
+  // .to("#pj-body", { background: "lightgrey"},1.5)
+  //   .to("body", { background: "rgb(200,200,200)" });
 
-  tlPj1
-  .to("#pj1 .pj-title", { opacity: "0" }, 1.5)
-//   .to("body", { background: "rgb(200,200,200)" });
+  // gsap.set("#pj1 .pj-title", { x: '-100'});
+  gsap.set(".pj-bottomline", { scaleX: 0 });
+  var initPjTl = gsap.timeline();
 
-//how to only change body color at this page
+  initPjTl
+    .from('#pj1 .pj-title',{x: '-20%', opacity: 0 ,duration: 1},0)
+    .from('#pj1 .pj-img',{x: '20%',  opacity: 0,  duration: 1},0)
+    .from('#pj1 .pj-info',{x: '-20%',  opacity: 0,  duration: 1},0.5)
+    .to(".pj-bottomline", {
+      scaleX: 1,
+      transformOrigin: "left center",
+      ease: Power3.easeIn,
+      duration: 1,
+    })
+    .to(".pj-bottomline", {
+      scaleX: 0,
+      transformOrigin: "center right",
+      ease: Power3.easeOut,
+      duration: 1,
+    });
 
-///also barba pin problem
+    var tlPj1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#pj1",
+        start: "top top",
+        end: "+=20%",
+        pin: "#pj1 .pj-title",
+        scrub: 1,
+        anticipatePin: 1,
+        markers: true,
+      },
+    });
+  
+    // tlPj1.to("#pj1 .pj-title", { opacity: 0 });
+
+    
+  // gsap
+  //   .timeline({
+  //     scrollTrigger: {
+  //       trigger: ".grid-container",
+  //       start: "top top",
+  //       end: () => innerHeight * 4,
+  //       scrub: true,
+  //       pin: ".grid",
+  //       anticipatePin: 1,
+  //       markers: true,
+  //     },
+  //   })
+  //   .set(".gridBlock:not(.centerBlock)", { autoAlpha: 0 })
+  //   .to(".gridBlock:not(.centerBlock)", { duration: 0.1, autoAlpha: 1 }, 0.001)
+  //   .from(".gridLayer", {
+  //     scale: 3.3333,
+  //     ease: "none",
+  //   });
+
+  // // Images to make it look better, not related to the effect
+  // const size = Math.max(innerWidth, innerHeight);
+  // gsap.set(".gridBlock", {
+  //   backgroundImage: (i) =>
+  //     `url(https://picsum.photos/${size}/${size}?random=${i})`,
+  // });
+
+  // const bigImg = new Image();
+  // bigImg.addEventListener("load", function () {
+  //   gsap.to(".centerPiece .gridBlock", { autoAlpha: 1, duration: 0.5 });
+  // });
+
+  // bigImg.src = `https://picsum.photos/${size}/${size}?random=50`;
 }
 
 barba.init({
@@ -274,10 +327,10 @@ barba.init({
         // window.scrollTo(0, 0);
         projectInit();
       },
-      leave(data){
-          console.log("cleam");
-          cleanGSAP();
-      }
+      leave(data) {
+        console.log("cleam");
+        cleanGSAP();
+      },
     },
   ],
 });
