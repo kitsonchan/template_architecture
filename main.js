@@ -211,10 +211,8 @@ function aboutInit() {
 }
 
 function projectInit() {
-  // .to("#pj-body", { background: "lightgrey"},1.5)
-  //   .to("body", { background: "rgb(200,200,200)" });
+/////gallery directly from https://codepen.io/GreenSock/pen/wvKwZXG
 
-  // gsap.set("#pj1 .pj-title", { x: '-100'});
   gsap.set(".pj-bottomline", { scaleX: 0 });
   var initPjTl = gsap.timeline();
 
@@ -243,31 +241,32 @@ function projectInit() {
         pin: "#pj1 .pj-title",
         scrub: 1,
         anticipatePin: 1,
-        markers: true,
+        // markers: true,
       },
     });
-  
-    // tlPj1.to("#pj1 .pj-title", { opacity: 0 });
 
+    var tlPj2 = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".grid-container",
+        start: "top top",
+        end: () => innerHeight * 4,
+        scrub: true,
+        pin: ".grid",
+        anticipatePin: 1,
+        // markers: true,
+      },
+    })
+    // .set(".gridBlock:not(.centerBlock)", { autoAlpha: 0 })
+    // .to(".gridBlock:not(.centerBlock)", { duration: 1, autoAlpha: 1 }, 0)
     
-  // gsap
-  //   .timeline({
-  //     scrollTrigger: {
-  //       trigger: ".grid-container",
-  //       start: "top top",
-  //       end: () => innerHeight * 4,
-  //       scrub: true,
-  //       pin: ".grid",
-  //       anticipatePin: 1,
-  //       markers: true,
-  //     },
-  //   })
-  //   .set(".gridBlock:not(.centerBlock)", { autoAlpha: 0 })
-  //   .to(".gridBlock:not(.centerBlock)", { duration: 0.1, autoAlpha: 1 }, 0.001)
-  //   .from(".gridLayer", {
-  //     scale: 3.3333,
-  //     ease: "none",
-  //   });
+    
+    tlPj2
+    .to('.pj2-title h2',{x: 0})
+    .from(".gridLayer", {
+      scale: 3.5,
+      ease: "none",
+    });
 
   // // Images to make it look better, not related to the effect
   // const size = Math.max(innerWidth, innerHeight);

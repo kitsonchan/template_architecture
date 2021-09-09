@@ -394,6 +394,17 @@ body {
   margin-bottom: 8em;
 }
 ///////////////////////////////////////
+.pj2-title {
+  overflow: hidden;
+  margin-bottom: 1em;
+  margin: auto;
+}
+
+.pj2-title h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
 .gridBlock {
   // opacity: 0;
   opacity: 1;
@@ -414,7 +425,6 @@ body {
   height: 60vw;
   margin: 0 calc(100vw / 20 * 3);
   position: absolute;
-
 }
 @media only screen and (max-width: 580px) {
   .grid {
